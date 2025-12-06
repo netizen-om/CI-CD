@@ -22,8 +22,9 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
           script: |
-            cd testCICD
-            git clone https://github.com/netizen-om/CI-CD.git
-            cd CI-CD
-            npm i
+            cd testCICD/CI-cd
+            node -v
+            ls
+            git pull origin main
+            npm install
             node index.js
