@@ -21,7 +21,11 @@ jobs:
           username: azureuser
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
-          script: ./deploy.sh
+          script: |
+            cd ~
+            chmod +x deploy.sh
+            ./deploy.sh
+
 
 
           
