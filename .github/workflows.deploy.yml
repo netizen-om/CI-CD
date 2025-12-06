@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: Push to EC2
+    name: Push to Azure VM
     runs-on: ubuntu-latest
 
     steps:
@@ -17,8 +17,9 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: 13.127.14.79
-          username: ubuntu
+          host: 13.70.44.146
+          username: azureuser
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
-          script: whomami
+          script: 
+            ls
