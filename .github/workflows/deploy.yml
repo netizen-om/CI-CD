@@ -26,4 +26,4 @@ jobs:
             git clone https://github.com/netizen-om/CI-CD.git
             cd CI-CD
             npm i
-            npm run dev
+            node index.js
