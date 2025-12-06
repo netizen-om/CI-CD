@@ -21,7 +21,7 @@ jobs:
           username: azureuser
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
-          script: 
+          script: |
             cd testCICD
             git pull
             npm i
